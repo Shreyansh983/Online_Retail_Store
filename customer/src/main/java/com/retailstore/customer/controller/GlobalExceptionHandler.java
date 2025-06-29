@@ -1,6 +1,6 @@
 package com.retailstore.customer.controller;
 
-import com.retailstore.customer.Exception.CustomerNotThereException;
+import com.retailstore.customer.Exception.CustomerNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -11,8 +11,8 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(CustomerNotThereException.class)
-    public ResponseEntity<?> handleCustomerNotThereException(CustomerNotThereException cartNotFoundException){
+    @ExceptionHandler(CustomerNotFoundException.class)
+    public ResponseEntity<?> handleCustomerNotThereException(CustomerNotFoundException cartNotFoundException){
         return new ResponseEntity<>("Customer not found!!", HttpStatus.NOT_FOUND);
     }
 
