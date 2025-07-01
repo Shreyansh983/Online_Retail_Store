@@ -25,7 +25,7 @@ spring:
         - id: PRODUCTS-SERVICE
           uri: lb://PRODUCTS-SERVICE
           predicates:
-            - Path=/api2/**
+            - Path=/products/v1/**
 
         - id: CUSTOMER-SERVICE
           uri: lb://CUSTOMER-SERVICE
