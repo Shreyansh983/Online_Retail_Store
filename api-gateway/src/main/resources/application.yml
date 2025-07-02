@@ -20,7 +20,7 @@ spring:
         - id: INVENTORY-SERVICE
           uri: lb://INVENTORY-SERVICE
           predicates:
-            - Path=/api3/**
+            - Path=/inventory/v1/**
 
         - id: PRODUCTS-SERVICE
           uri: lb://PRODUCTS-SERVICE

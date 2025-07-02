@@ -1,23 +1,20 @@
-package com.retailstore.inventory.entity;
+package com.retailstore.inventory.dto;
 
-import jakarta.persistence.*;
+import com.retailstore.inventory.VO.Products;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Inventory {
-    @Id
+public class InventoryResponseDTO {
     private Long productId;
-
-    @Column(nullable = false)
     private Integer availableQuantity;
-
-    @Column(nullable = false)
     private Integer reservedQuantity;
+    private String stockStatus;
+    private Products products;
 }
+
